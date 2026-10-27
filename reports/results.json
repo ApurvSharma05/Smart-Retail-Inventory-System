@@ -1,0 +1,48 @@
+{
+  "champion": "Seasonal naive",
+  "n_train": 3286,
+  "n_test": 1214,
+  "test_start": "2024-10-01",
+  "champion_test": {
+    "MAE": 5.517248640547002,
+    "RMSE": 12.24943460898772,
+    "MAPE": 0.1423573685678968,
+    "WAPE": 0.14873073343749302,
+    "R2": 0.5163048770624719
+  },
+  "naive_test_wape": 0.310187858062797,
+  "errors": {
+    "wape_by_season": {
+      "Festive_Diwali": 0.1476,
+      "Winter": 0.1502
+    },
+    "wape_by_category": {
+      "Apparel": 0.1525,
+      "Electronics": 0.1547,
+      "Grocery": 0.136,
+      "HomeDecor": 0.1515
+    },
+    "surge_rows": 12,
+    "wape_excluding_surges": 0.1345000459718378
+  },
+  "alerts": {
+    "records": 1214,
+    "simulated_stockouts": 866,
+    "stockout_rate": 0.71334431630972,
+    "forecast_rule": {
+      "alerts_raised": 946,
+      "recall": 0.9953810623556582,
+      "precision": 0.9112050739957717
+    },
+    "store_reorder_level": {
+      "alerts_raised": 210,
+      "recall": 0.24133949191685913,
+      "precision": 0.9952380952380953
+    }
+  },
+  "criteria": {
+    "forecast_beats_naive": true,
+    "forecast_mape_le_20pct": true,
+    "alert_recall_ge_90pct": true
+  }
+}

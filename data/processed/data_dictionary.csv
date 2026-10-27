@@ -1,0 +1,11 @@
+column,description,type,unit,notes
+date,"Timestamp of the inventory log entry (YYYY-MM-DD HH:MM:SS); 2024-01-01 to 2024-12-31, 30 minutes apart within a day from 08:00",datetime,-,Used for the chronological train/test split. Sort by date before any lag or rolling feature.
+product_id,Pseudonymous SKU code SKU0001-SKU0500 (500 SKUs),text,-,Join key for per-SKU history. No product names are held (anonymised).
+category,"Product category: Grocery, Electronics, Apparel or HomeDecor",text,-,"Not stable per SKU in the 500 original rows (a known data-quality issue, see docs/cleaning_log.md)."
+season,"Retail season of the log date: Winter (16 Nov-Feb), Summer (Mar-Jun), Monsoon (Jul-Sep), Festive_Diwali (1 Oct-15 Nov)",text,-,"Known in advance from the calendar, so it is a valid forecasting input. Demand multipliers 1.0 / 1.2 / 0.95 / 1.4 are a planning assumption."
+stock_qty,Units physically on hand at the log entry; 0 means a stock-out,integer,units,"Must be >= 0. Used for alerts and days of cover, not as a demand input."
+reorder_level,The store's fixed reorder point; the store flags an item when stock_qty <= reorder_level,integer,units,Baseline alert rule that the forecast-based rule is compared with.
+daily_sales,Units sold per day for the SKU on that log date (seasonal multipliers applied),integer,units/day,TARGET of the forecast. Must never be used as an input for the same record (leakage).
+unit_cost,"MASKED supplier unit cost: relative Cost Index (dataset median = 100, +/-2% noise), not a currency amount",float,index points,SENSITIVE in raw form (supplier pricing). Real prices are not recoverable from this column.
+supplier_id,Pseudonymous supplier code SUP01-SUP30,text,-,Anonymised identifier; no supplier names or contract terms are held.
+lead_days,Supplier lead time between placing and receiving an order,integer,days,Normal range 3-21; values above 21 mark a supplier delay. Must be >= 1.

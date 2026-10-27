@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+venv/
+.venv/
+.pytest_cache/
+# Raw file holds the real supplier prices (commercially sensitive): keep it local, never publish it.
+data/raw/

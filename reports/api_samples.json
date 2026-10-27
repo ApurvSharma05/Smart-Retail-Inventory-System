@@ -1,0 +1,187 @@
+{
+  "/api/health": {
+    "model": "Seasonal naive",
+    "records": 5000,
+    "skus": 500,
+    "status": "ok",
+    "test_metrics": {
+      "MAE": 5.517248640547002,
+      "MAPE": 0.1423573685678968,
+      "R2": 0.5163048770624719,
+      "RMSE": 12.24943460898772,
+      "WAPE": 0.14873073343749302
+    }
+  },
+  "/api/forecast?product_id=SKU0001&season=Festive_Diwali": {
+    "forecast_daily_units": 49.27,
+    "model": "Seasonal naive",
+    "product_id": "SKU0001",
+    "season": "Festive_Diwali"
+  },
+  "/api/reorder-alerts?priority=Critical&category=Grocery": {
+    "alerts": [
+      {
+        "category": "Grocery",
+        "days_of_cover": 0.0,
+        "forecast_daily": 41.9,
+        "lead_days": 16,
+        "priority": "Critical",
+        "product_id": "SKU0147",
+        "reorder_level": 88,
+        "reorder_point": 803.6,
+        "stock_qty": 0,
+        "suggested_order_qty": 1608,
+        "supplier_id": "SUP18"
+      },
+      {
+        "category": "Grocery",
+        "days_of_cover": 0.0,
+        "forecast_daily": 39.6,
+        "lead_days": 4,
+        "priority": "Critical",
+        "product_id": "SKU0352",
+        "reorder_level": 49,
+        "reorder_point": 190.2,
+        "stock_qty": 0,
+        "suggested_order_qty": 381,
+        "supplier_id": "SUP12"
+      }
+    ],
+    "count": 2
+  },
+  "/api/suppliers?tier=High": {
+    "count": 10,
+    "suppliers": [
+      {
+        "avg_cost_index": 76.58,
+        "avg_daily_sales": 32.98,
+        "avg_lead_days": 15.14,
+        "delay_rate_pct": 1.65,
+        "max_lead_days": 35,
+        "records": 121,
+        "risk_score": 80.8,
+        "risk_tier": "High",
+        "skus": 50,
+        "stockout_rate_pct": 0.83,
+        "supplier_id": "SUP23"
+      },
+      {
+        "avg_cost_index": 102.75,
+        "avg_daily_sales": 30.87,
+        "avg_lead_days": 13.95,
+        "delay_rate_pct": 1.35,
+        "max_lead_days": 23,
+        "records": 148,
+        "risk_score": 78.3,
+        "risk_tier": "High",
+        "skus": 45,
+        "stockout_rate_pct": 2.7,
+        "supplier_id": "SUP05"
+      },
+      {
+        "avg_cost_index": 102.08,
+        "avg_daily_sales": 33.73,
+        "avg_lead_days": 15.31,
+        "delay_rate_pct": 1.0,
+        "max_lead_days": 28,
+        "records": 201,
+        "risk_score": 76.2,
+        "risk_tier": "High",
+        "skus": 60,
+        "stockout_rate_pct": 1.0,
+        "supplier_id": "SUP18"
+      },
+      {
+        "avg_cost_index": 110.29,
+        "avg_daily_sales": 31.14,
+        "avg_lead_days": 14.81,
+        "delay_rate_pct": 1.32,
+        "max_lead_days": 35,
+        "records": 152,
+        "risk_score": 73.6,
+        "risk_tier": "High",
+        "skus": 44,
+        "stockout_rate_pct": 0.66,
+        "supplier_id": "SUP15"
+      },
+      {
+        "avg_cost_index": 110.11,
+        "avg_daily_sales": 26.78,
+        "avg_lead_days": 13.46,
+        "delay_rate_pct": 2.34,
+        "max_lead_days": 35,
+        "records": 171,
+        "risk_score": 73.1,
+        "risk_tier": "High",
+        "skus": 56,
+        "stockout_rate_pct": 0.58,
+        "supplier_id": "SUP07"
+      },
+      {
+        "avg_cost_index": 100.79,
+        "avg_daily_sales": 34.33,
+        "avg_lead_days": 15.09,
+        "delay_rate_pct": 0.54,
+        "max_lead_days": 32,
+        "records": 185,
+        "risk_score": 73.0,
+        "risk_tier": "High",
+        "skus": 51,
+        "stockout_rate_pct": 1.62,
+        "supplier_id": "SUP02"
+      },
+      {
+        "avg_cost_index": 94.84,
+        "avg_daily_sales": 32.18,
+        "avg_lead_days": 13.34,
+        "delay_rate_pct": 1.0,
+        "max_lead_days": 31,
+        "records": 200,
+        "risk_score": 62.9,
+        "risk_tier": "High",
+        "skus": 52,
+        "stockout_rate_pct": 1.5,
+        "supplier_id": "SUP14"
+      },
+      {
+        "avg_cost_index": 95.24,
+        "avg_daily_sales": 29.36,
+        "avg_lead_days": 13.26,
+        "delay_rate_pct": 1.02,
+        "max_lead_days": 22,
+        "records": 98,
+        "risk_score": 59.7,
+        "risk_tier": "High",
+        "skus": 40,
+        "stockout_rate_pct": 1.02,
+        "supplier_id": "SUP01"
+      },
+      {
+        "avg_cost_index": 103.39,
+        "avg_daily_sales": 35.33,
+        "avg_lead_days": 13.32,
+        "delay_rate_pct": 1.09,
+        "max_lead_days": 33,
+        "records": 184,
+        "risk_score": 58.3,
+        "risk_tier": "High",
+        "skus": 58,
+        "stockout_rate_pct": 0.54,
+        "supplier_id": "SUP24"
+      },
+      {
+        "avg_cost_index": 105.05,
+        "avg_daily_sales": 37.87,
+        "avg_lead_days": 13.31,
+        "delay_rate_pct": 0.64,
+        "max_lead_days": 32,
+        "records": 157,
+        "risk_score": 57.5,
+        "risk_tier": "High",
+        "skus": 45,
+        "stockout_rate_pct": 1.27,
+        "supplier_id": "SUP25"
+      }
+    ]
+  }
+}
