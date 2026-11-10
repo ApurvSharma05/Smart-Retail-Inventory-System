@@ -580,7 +580,7 @@ for line in ["python -m venv venv", "venv\\Scripts\\activate", "pip install -r r
 h1("Appendix B: AI Tool Disclosure", page_break=False)
 para("In line with the programme's ethical guidelines, the use of AI tools in this project is disclosed as follows.")
 table(["Item", "Details"], [
-    ["Tool", "Claude (Anthropic), a large language model assistant"],
+    ["Tool", "An AI coding assistant (large language model)"],
     ["Used for", "Drafting and debugging the Python scripts, reviewing the project against the programme build guide, and drafting the documentation and this report"],
     ["Learner responsibility", "The learner is responsible for the content of the final submission; all scripts were run and the reported results reproduced from the repository"],
     ["Data", "No real customer or supplier data was shared with the AI tool beyond the programme-supplied dataset.csv"]],
